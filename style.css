@@ -1,0 +1,35 @@
+body{
+    background-color:rgb(39, 38, 38) ;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+    width: 100%;
+}
+
+.time-display{
+    display:inline-block;
+    color: aliceblue;
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 15%;
+    
+   }
+
+.clock{
+    font-size: 10vw;
+    font-weight:bolder;
+    padding: auto;
+    margin-bottom: 3%;
+
+}
+
+.calander-display{
+    display:inline-block;
+    color: aliceblue;
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 3%;
+    font-size: 5vw;
+    font-weight:bolder;
+    padding-top:10px;
+}
+
