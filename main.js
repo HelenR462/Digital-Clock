@@ -1,10 +1,23 @@
 function clock(){
-const time = new Date();
+ const today = new Date();
 
-var hours = time.getHours();
-var minutes = time.getMinutes();
-var seconds= time.getSeconds();
-var am_or_pm = document.getElementById('am_or_pm');
+ var hours = today.getHours();
+ var minutes = today.getMinutes();
+ var seconds= today.getSeconds();
+ var am_or_pm = document.getElementById('am_or_pm');
+
+ const timeDisplay = document.getElementsByClassName('time-display');
+ timeDisplay.textContent =`${"hour"}, ${"minutes"} ${"seconds"} ${"hr >= 12"? 'PM':'AM'}`;
+ 
+ const day = getDayByIndex(today.getDay());
+ const month = getMonthByIndex(today.getMonth());
+ const date = addDateSuffix(today.getDate());
+ const year= today.getFullYear();
+
+ const calanderDisplay = document.getElementsByClassName('calander-display');
+calanderDisplay.textContent =
+`${"day"}, ${"month"} ${"date"} ${"year"}`;
+
 
 
 if (hours <10) {
@@ -28,31 +41,43 @@ document.getElementById("hours").innerHTML = hours;
 document.getElementById("minutes").innerHTML = minutes;
 document.getElementById("seconds").innerHTML = seconds;
 
+
+
+document.getElementById("day").innerHTML = day + ",";
+document.getElementById("month").innerHTML = month;
+document.getElementById("date").innerHTML = date;
+document.getElementById("year").innerHTML = year;
+
 }
+
 setInterval(clock,100);
 
 
+  function addDateSuffix(date){
+  if (date === [1,21,31]) {
+     return date + "st" ;
+}
+  if (date === [2,22]) {
+        return date + "nd";
+}
+  if (date === [3,23]) {
+        return date + "rd";
+}else{
+       return date + "th";
+ }
 
+  }
 
-function calander(){
-    const today = new day();
-   const day = today.getDay();
-   const month = today.getMonth();
-   const date = today.getDate();
-   const year= today.getFullYear();
+function getDayByIndex(index){
+ const day =  ["Sunday", "Monday", "Tuesday", "Wedensday", "Thursday", "Friday", "Saturday"];
 
-
-document.write("day").innerHTML = day;
-document.getElementsById("month").innerHTML = month;
-
-return (`${"day"}, ${"month"} ${"date"} ${"year"}`);
+ return day[index];
 }
 
-var display = day ["Sunday", "Monday", "Tuesday", "Wedensday", "Thursday", "Friday", "Saturday"];
-
-var display = month["January","February","March", "April", "May", "June", "July","August", "September","October","November","December"];
-
-
-
+function getMonthByIndex(index){
+  const month =  ["January","February","March", "April", "May", "June", "July","August", "September","October","November","December"];
+  
+  return month[index];
+}
 
 
