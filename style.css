@@ -1,35 +1,37 @@
-body{
-    background-color:rgb(39, 38, 38) ;
+*{ 
+    background-color: rgb(243, 223, 112);
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(53, 52, 52);
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     text-align: center;
-    width: 100%;
 }
 
-.time-display{
-    display:inline-block;
-    color: aliceblue;
-    font-family: 'Times New Roman', Times, serif;
-    margin-top: 15%;
-    
-   }
-
-.clock{
-    font-size: 10vw;
-    font-weight:bolder;
-    padding: auto;
-    margin-bottom: 3%;
-
+h1{
+    font-size: 40px;
+    text-decoration-color:rgb(110, 110, 110) ;
+    margin-top: 10px;
+    padding:20px;
 }
 
-.calander-display{
-    display:inline-block;
-    color: aliceblue;
-    font-family: 'Times New Roman', Times, serif;
-    margin-top: 3%;
-    font-size: 5vw;
-    font-weight:bolder;
-    padding-top:10px;
+h3{
+    font-size: 30px;
+    margin-bottom: 20px;
 }
 
+img{ 
+    display: inline-block;
+    width: 30%;
+    height: 350px;
+ }
+ 
+ .player, .computer{
+     color: rgb(15, 15, 15);
+     margin:20px;
+     display: inline-block;
+     font-style: oblique;
+     font-weight: bold;
+ }
+
+ 

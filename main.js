@@ -1,83 +1,41 @@
-function clock(){
- const today = new Date();
+// what makes the button click?
+// How does the computer pick its choice?
+// how do I match the outcomes to make a decision of win or lose?
+//how do I transfer the score to show on the score counter?
+// how do I declair the winner
 
- var hours = today.getHours();
- var minutes = today.getMinutes();
- var seconds= today.getSeconds();
- var am_or_pm = document.getElementById('am_or_pm');
+let myFunction = addEventListener(onclick, myFunction());
+let computerPick = Math.random();
+let selection = ["Rock","Paper","Scissors"];
 
- const timeDisplay = document.getElementsByClassName('time-display');
- timeDisplay.textContent =`${"hour"}, ${"minutes"} ${"seconds"} ${"hr >= 12"? 'PM':'AM'}`;
- 
- const day = getDayByIndex(today.getDay());
- const month = getMonthByIndex(today.getMonth());
- const date = addDateSuffix(today.getDate());
- const year= today.getFullYear();
-
- const calanderDisplay = document.getElementsByClassName('calander-display');
-calanderDisplay.textContent =
-`${"day"}, ${"month"} ${"date"} ${"year"}`;
-
-
-
-if (hours <10) {
-    hours  = "0" + hours;
-}
-if (minutes <10) {
-  minutes = "0" + minutes;
-}
-if (seconds <10) {
-seconds = "0" + seconds;
+function myFunction(computerPick){
+    Math.random();
+    return selection;
 }
 
-if(hours >= 12){
-    am_or_pm.innerHTML = "PM";
- }else{
-     am_or_pm.innerHTML = "AM";
- }
+let playerChoice = selection;
+selection =["Rock","Paper","Scissors"];
 
-
-document.getElementById("hours").innerHTML = hours;
-document.getElementById("minutes").innerHTML = minutes;
-document.getElementById("seconds").innerHTML = seconds;
-
-
-
-document.getElementById("day").innerHTML = day + ",";
-document.getElementById("month").innerHTML = month;
-document.getElementById("date").innerHTML = date;
-document.getElementById("year").innerHTML = year;
-
+function myFunction(playerChoice){
+if (selection === computerPick)
+     return "It's a Tie!";
 }
 
-setInterval(clock,100);
+let score = [1,2,3,4,5,6,7,8,9,10];
+let playerScore;
+let computerScore;
 
-
-  function addDateSuffix(date){
-  if (date === [1,21,31]) {
-     return date + "st" ;
-}
-  if (date === [2,22]) {
-        return date + "nd";
-}
-  if (date === [3,23]) {
-        return date + "rd";
+function myFunction(score){
+    if (playerScore === computerScore)
+    return "it's a Tie!";
+} else if {
+    (playerScore > computerScore)
+    return "Player Wins!";
 }else{
-       return date + "th";
- }
-
-  }
-
-function getDayByIndex(index){
- const day =  ["Sunday", "Monday", "Tuesday", "Wedensday", "Thursday", "Friday", "Saturday"];
-
- return day[index];
+    (playerScore > computerScore)
+    return "You Lose):"
 }
 
-function getMonthByIndex(index){
-  const month =  ["January","February","March", "April", "May", "June", "July","August", "September","October","November","December"];
-  
-  return month[index];
-}
+
 
 
